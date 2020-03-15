@@ -1,0 +1,39 @@
+{% extends "_layout" %}
+{% set templateName = "project-index" %}
+
+{% block project %}
+<article class="project">
+
+  <header>
+    <h2>{{ entry.clientName }}</h2>
+    <span>{{ entry.projectUrl }}</span>
+  </header>
+  
+  <div class="rich-text">
+    {{ entry.projectDescription }}
+  </div>
+
+  {% if entry.mobileScreenshot | length %}
+  {% for asset in entry.mobileScreenshot %}
+  <div class="project-image--m">
+    <figure>
+      <img src="{{ asset.url }}" alt="{{ asset.title }}">
+      <figcaption>{{ asset.title }}</figcaption>
+    </figure>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if entry.desktopScreenshot | length %}
+  {% for asset in entry.desktopScreenshot %}
+  <div class="project-image--d">
+    <figure>
+      <img src="{{ asset.url }}" alt="{{ asset.title }}">
+      <figcaption>{{ asset.title }}</figcaption>
+    </figure>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+</article>
+{% endblock %}

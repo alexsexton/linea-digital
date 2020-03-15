@@ -1,0 +1,23 @@
+//   Grid Mixins
+//
+//   Site: 1643px;
+//   Grid Measure (cell): 221px;
+//   Grid Gutter: 16px;
+//   No. of Cols: 7
+//
+
+// Pixel widths
+$grid-measure-px: 221px;
+$grid-gutter-px: 16px;
+
+// Turn to percentage
+$grid-wrapper: $site-max-width;
+$grid-gutter: percentage($grid-gutter-px / $site-max-width);
+$grid-measure: percentage($grid-measure-px / $site-max-width);
+
+$grid-gap: $grid-gutter;
+
+// Magic! Use like this: flex: 0 0 grid-width(8);
+@function grid-width($n) {
+  @return $n * $grid-measure + ($n - 1) * $grid-gutter;
+}

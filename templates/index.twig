@@ -1,0 +1,59 @@
+{% extends "_layout" %}
+
+{% set templateName = "index-layout" %}
+
+{% set title = "Index" %}
+
+{% block content %}
+<section class="masthead">
+  <article class="intro">
+
+  {% if entry.header %}
+  <h1>{{ entry.header }}</h1>
+  {% endif %}
+
+  {% if entry.richText %}
+  <div class="rich-text">
+    {{ entry.richText }}
+  </div>
+  {% endif %}
+
+  {% if entry.buttonText %}
+  <a href="{% if entry.buttonUrl %} {{ entry.buttonUrl }} {% else %} # {% endif %}" class="button">
+    {{ entry.buttonText }}
+  </a>
+  {% endif %}
+
+  </article>
+</section>
+
+<section class="projects">
+{% for entry in craft.entries.section('projects').all %}
+
+  {% include 'includes/project.twig' %}
+
+{% endfor %}
+</section>
+
+
+<section class="clients">
+<h2>Clients</h2>
+
+{% for entry in craft.entries.section('clients').all %}
+<ul>
+  {% for block in entry.clients.type('client') %}
+    <li>{{ block.clientName }}</li>
+  {% endfor %}
+</ul>
+{% endfor %}
+
+</section>
+
+<section class="contact">
+<h2>Contact</h2>
+{% for entry in craft.entries.section('contact').all %}
+<p><a href="mailto:{{ entry.contactEmail }}">{{ entry.contactEmail }}</a></p>
+{% endfor %}
+</section>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<article class="project">
+
+  <header class="client-details">
+    <h3>{{ entry.clientName }}</h3>
+    <span class="project-url"><a href="{{ entry.projectUrl }}">{{ entry.projectUrl | trim('https://') }}</a></span>
+  </header>
+
+  <div class="product-description rich-text">
+    {{ entry.projectDescription }}
+  </div>
+
+  <div class="product-technology">
+    <h4>Technology</h4>
+    <ul>
+      {% for option in entry.projectTechnology %}
+        <li>{{ option.label }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% if entry.mobileScreenshot | length %}
+  {% for asset in entry.mobileScreenshot.all() %}
+  <div class="project-image--m">
+    <img src="{{ asset.url }}" alt="{{ asset.title }}">
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if entry.desktopScreenshot | length %}
+  {% for asset in entry.desktopScreenshot.all() %}
+  <div class="project-image--d">
+    <img src="{{ asset.url }}" alt="{{ asset.title }}">
+  </div>
+  {% endfor %}
+  {% endif %}
+
+</article>

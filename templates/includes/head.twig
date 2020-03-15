@@ -1,0 +1,38 @@
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ siteName }}{% if  entry.title is defined %} / {{ entry.title }} {% elseif title is defined %} / {{ title }}{% endif %}</title>
+
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  {% if entry.title is defined %}
+  <link rel="canonical" href="{{ entry.title }}">
+  {% elseif  entry.url is defined %}
+  <link rel="canonical" href="{{ entry.url }}">
+  {% endif %}
+
+  <link rel="dns-prefetch" href="//use.typekit.net">
+
+  <link rel="stylesheet" href="/static/main.css?v={{ now|date("zB") }}" media="screen">
+
+  <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css">
+
+  <script src="/static/lib/modernizr.min.js"></script>
+
+  <meta property="og:type" content="article">
+  {% if entry.title is defined %}
+  <meta property="og:title" content="{{ entry.title }}">
+  <meta property="og:url" content="{{ entry.url }}">
+  {% elseif entry.url is defined %}
+  <meta property="og:url" content="{{ entry.url }}">
+  {% endif %}
+  <meta property="og:description" content="">
+
+  <meta property="og:site_name" content="{{ siteName }}">
+
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/static/favicon.png">
+
+</head>
