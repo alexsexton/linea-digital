@@ -1,6 +1,9 @@
 .site-header {
   background: $masthead-background;
   padding: $spacer3 $site-gutters;
+  @media screen and (max-width: $small-screen) {
+    padding: $spacer1 $small-site-gutters;
+  }
 }
 
 .logo {
