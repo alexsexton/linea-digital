@@ -4,7 +4,7 @@
   grid-template-columns: repeat(7, 1fr);
   @media screen and (max-width: $small-screen) {
     display: flex;
-    flex-direction: column nowrap;
+    flex-flow: column nowrap;
   }
 }
 
