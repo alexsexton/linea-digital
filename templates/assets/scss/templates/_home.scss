@@ -2,11 +2,18 @@
   grid-gap: 1rem;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
+  @media screen and (max-width: $small-screen) {
+    display: flex;
+    flex-direction: column nowrap;
+  }
 }
 
 .masthead {
   @include grid;
   padding: 0 $site-gutters $spacer6;
+  @media screen and (max-width: $small-screen) {
+    padding: 0 $small-site-gutters $spacer6;
+  }
   background: $masthead-background;
 
   .intro {
@@ -14,6 +21,9 @@
 
     .rich-text {
       margin-right: 25%;
+      @media screen and (max-width: $small-screen) {
+        margin: 0;
+      }
     }
   }
 
@@ -22,12 +32,17 @@
     font-size: 6rem;
     color: $type-medium;
     margin: 3rem 0;
+    @media screen and (max-width: $small-screen) {
+      font-size: 3rem;
+    }
   }
 }
 
 .projects {
   padding: 0 $site-gutters $spacer4;
-
+  @media screen and (max-width: $small-screen) {
+    padding: 0 $small-site-gutters $spacer4;
+  }
 
   .project {
     @include grid;
@@ -40,7 +55,10 @@
     flex-flow: column-reverse nowrap;
 
     h3 {
-      font-size: 3rem;
+      font-size: 2rem;
+      @media screen and (max-width: $small-screen) {
+        font-size: 1.5rem;
+      }
     }
 
     .project-url {
@@ -88,6 +106,9 @@
 
 .clients {
   padding: 0 $site-gutters $spacer10;
+  @media screen and (max-width: $small-screen) {
+    padding: 0 $small-site-gutters $spacer10;
+  }
 
   ul {
     @include grid;
@@ -102,6 +123,9 @@
 
 .contact {
   padding: 0 $site-gutters $spacer10;
+  @media screen and (max-width: $small-screen) {
+    padding: 0 $small-site-gutters $spacer10;
+  }
 
   p {
     font-size: 1.5rem;
@@ -116,5 +140,8 @@
   h2 {
     font-size: 3rem;
     margin-bottom: $spacer2;
+    @media screen and (max-width: $small-screen) {
+      font-size: 2rem;
+    }
   }
 }
