@@ -105,6 +105,10 @@
 
   p {
     font-size: 1.5rem;
+
+    a, a:hover {
+      color: $type-medium;
+    }
   }
 }
 
