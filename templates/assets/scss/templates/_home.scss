@@ -89,6 +89,10 @@
     align-items: flex-end;
     margin-left: 50%;
     margin-right: -50%;
+    @media screen and (max-width: $small-screen) {
+      margin: 0;
+      width: 75%;
+    }
   }
 
   .project-image--d {
