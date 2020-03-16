@@ -41,7 +41,7 @@
 
 {% for entry in craft.entries.section('clients').all %}
 <ul>
-  {% for block in entry.clients.type('client') %}
+  {% for block in entry.clients.type('client').all %}
     <li>{{ block.clientName }}</li>
   {% endfor %}
 </ul>
