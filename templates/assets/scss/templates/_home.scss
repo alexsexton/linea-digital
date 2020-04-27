@@ -18,6 +18,9 @@
 
   .intro {
     grid-column: 2 / span 5;
+    @media screen and (max-width: $big-screen) {
+      grid-column: 2 / span 6;
+    }
 
     .rich-text {
       margin-right: 25%;
@@ -51,6 +54,9 @@
 
   .client-details {
     grid-column: 3 / span 3;
+    @media screen and (max-width: $big-screen) {
+      grid-column: 3 / span 4;
+    }
     display: flex;
     flex-flow: column-reverse nowrap;
 
