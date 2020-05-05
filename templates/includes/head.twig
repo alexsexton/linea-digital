@@ -30,7 +30,9 @@
   {% elseif entry.url is defined %}
   <meta property="og:url" content="{{ entry.url }}">
   {% endif %}
-  <meta property="og:description" content="">
+  {% if siteDescription.metaDescription is defined %}
+  <meta property="og:description" content="{{ siteDescription.metaDescription }}">
+  {% endif %}
 
   <meta property="og:site_name" content="{{ siteName }}">
 
