@@ -5,11 +5,11 @@
     <span class="project-url"><a href="{{ entry.projectUrl }}">{{ entry.projectUrl | trim('https://') }}</a></span>
   </header>
 
-  <div class="product-description rich-text">
+  <div class="project-description rich-text">
     {{ entry.projectDescription }}
   </div>
 
-  <div class="product-technology">
+  <div class="project-technology">
     <h4>Technology</h4>
     <ul>
       {% for option in entry.projectTechnology %}
