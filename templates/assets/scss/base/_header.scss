@@ -1,11 +1,42 @@
 .site-header {
-  background: $masthead-background;
-  padding: $spacer3 $site-gutters;
+  @include grid;
+  background-color: $masthead-background;
+  padding: $spacer2 $site-gutters;
+  position: sticky;
+  top: 0;
+  z-index: 2;
   @media screen and (max-width: $small-screen) {
-    padding: $spacer2 $small-site-gutters;
+    padding: $spacer $small-site-gutters;
+    grid-gap: $spacer;
   }
 }
 
 .logo {
-  max-width: 140px;
+  max-width: 100px;
+  grid-column: 1 / span 2;
+}
+
+.main-nav {
+  grid-column: 3 / span 5;
+
+  ul {
+    display: flex;
+    padding-top: 5px;
+    @media screen and (max-width: $small-screen) {
+      padding-top: 0;
+    }
+
+    li {
+      margin-right: $spacer2;
+
+      a {
+        color: $type-dark;
+        font-weight: 200;
+        &:hover {
+          color: $type-medium;
+          border-bottom: 1px solid $type-medium;
+        }
+      }
+    }
+  }
 }

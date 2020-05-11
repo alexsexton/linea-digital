@@ -5,7 +5,7 @@
 {% set title = "Index" %}
 
 {% block content %}
-<section class="masthead">
+<section class="masthead" id="about">
   <article class="intro">
 
   {% if entry.header %}
@@ -27,7 +27,8 @@
   </article>
 </section>
 
-<section class="projects">
+<section class="projects" id="projects">
+<h2>Work</h2>
 {% for entry in craft.entries.section('projects').all %}
 
   {% include 'includes/project.twig' %}
@@ -36,7 +37,7 @@
 </section>
 
 
-<section class="clients">
+<section class="clients" id="clients">
 <h2>Clients</h2>
 
 {% for entry in craft.entries.section('clients').all %}
@@ -49,7 +50,7 @@
 
 </section>
 
-<section class="contact">
+<section class="contact" id="contact">
 <h2>Contact</h2>
 {% for entry in craft.entries.section('contact').all %}
 <p><a href="mailto:{{ entry.contactEmail }}">{{ entry.contactEmail }}</a></p>

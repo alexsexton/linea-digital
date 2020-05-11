@@ -1,7 +1,7 @@
 // Global Variables
 
 // Paths. Use like this in css url("#{$image-path}/image.svg");
-$image-path: "../static/images";
+$image-path: "./static/images";
 $font-path: "../static/fonts";
 
 // Spacers
@@ -51,10 +51,14 @@ $light-grey: #d4d4d4;
 $lightest-grey: #f6f2f7;
 $white: #fff;
 
+// Branding
+
+$reddish: #9f5043;
+
 // Site
-$mastead-type: #9f5043;
+$mastead-type: $reddish;
 $type-dark: #292220;
-$type-medium: #694830;
+$type-medium: #796b6e;
 $site-background: #f4f1ec;
 $masthead-background: #e8ddd9;
 

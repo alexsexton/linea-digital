@@ -21,3 +21,13 @@ $grid-gap: $grid-gutter;
 @function grid-width($n) {
   @return $n * $grid-measure + ($n - 1) * $grid-gutter;
 }
+
+@mixin grid {
+  grid-gap: $spacer2;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  @media screen and (max-width: $small-screen) {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}

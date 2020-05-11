@@ -1,13 +1,3 @@
-@mixin grid {
-  grid-gap: $spacer2;
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  @media screen and (max-width: $small-screen) {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-}
-
 .masthead {
   @include grid;
   padding: 0 $site-gutters $spacer6;
@@ -43,20 +33,20 @@
 }
 
 .projects {
-  padding: 0 $site-gutters $spacer4;
+  padding: $spacer6 $site-gutters;
   @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer4;
+    padding: $spacer3 $small-site-gutters;
   }
 
   .project {
     @include grid;
-    padding: $spacer6 0;
+    padding: 0 0 $spacer4 0;
 
     @media screen and (max-width: $small-screen) {
       position: relative;
       display: block;
-      padding: $spacer3 0 $spacer5;
-      border-bottom: 2px solid #306962;
+      padding: $spacer3 0 $spacer2;
+      border-bottom: 2px solid $type-medium;
     }
 
   }
@@ -91,7 +81,7 @@
   }
 
   .project-technology {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
     grid-row: 2;
 
     h4 {
@@ -131,7 +121,7 @@
 .clients {
   padding: 0 $site-gutters $spacer10;
   @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer10;
+    padding: 0 $small-site-gutters $spacer5;
   }
 
   ul {
@@ -148,7 +138,7 @@
 .contact {
   padding: 0 $site-gutters $spacer10;
   @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer10;
+    padding: 0 $small-site-gutters $spacer5;
   }
 
   p {
