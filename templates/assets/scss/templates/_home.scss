@@ -17,13 +17,13 @@
   background: $masthead-background;
 
   .intro {
-    grid-column: 2 / span 7;
+    grid-column: 3 / span 7;
     @media screen and (max-width: $big-screen) {
       grid-column: 2 / span 9;
     }
 
     .rich-text {
-      margin-right: 25%;
+      margin-right: 50%;
       @media screen and (max-width: $small-screen) {
         margin: 0;
       }
