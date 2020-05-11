@@ -1,7 +1,7 @@
 @mixin grid {
-  grid-gap: 1rem;
+  grid-gap: $spacer2;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(9, 1fr);
   @media screen and (max-width: $small-screen) {
     display: flex;
     flex-flow: column nowrap;
@@ -17,9 +17,9 @@
   background: $masthead-background;
 
   .intro {
-    grid-column: 2 / span 5;
+    grid-column: 2 / span 7;
     @media screen and (max-width: $big-screen) {
-      grid-column: 2 / span 6;
+      grid-column: 2 / span 9;
     }
 
     .rich-text {
@@ -33,10 +33,11 @@
   h1 {
     font-family: $font-family-serif;
     font-size: 5rem;
-    color: $type-medium;
-    margin: 3rem 0;
+    color: $mastead-type;
+    margin: $spacer3 0;
     @media screen and (max-width: $small-screen) {
       font-size: 3rem;
+      margin: $spacer2 0;
     }
   }
 }
@@ -50,12 +51,20 @@
   .project {
     @include grid;
     padding: $spacer6 0;
+
+    @media screen and (max-width: $small-screen) {
+      position: relative;
+      display: block;
+      padding: $spacer3 0 $spacer5;
+      border-bottom: 2px solid #306962;
+    }
+
   }
 
   .client-details {
-    grid-column: 3 / span 3;
+    grid-column: 4 / span 4;
     @media screen and (max-width: $big-screen) {
-      grid-column: 3 / span 4;
+      grid-column: 4 / span 6;
     }
     display: flex;
     flex-flow: column-reverse nowrap;
@@ -75,7 +84,10 @@
   }
 
   .project-description {
-    grid-column: 3 / span 3;
+    grid-column: 4 / span 4;
+    @media screen and (max-width: $big-screen) {
+      grid-column: 4 / span 6;
+    }
   }
 
   .project-technology {
@@ -89,21 +101,23 @@
   }
 
   .project-image--m {
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
     grid-row: 3;
     display: flex;
     align-items: flex-end;
-    margin-left: 50%;
-    margin-right: -50%;
     @media screen and (max-width: $small-screen) {
       margin: 0;
-      width: 75%;
+      width: 25%;
+      position: absolute;
+      bottom: $spacer3;
+      left: $spacer;
+      z-index: 1;
     }
   }
 
   .project-image--d {
     padding-top: $spacer4;
-    grid-column: 3 / span 4;
+    grid-column: 4 / span 6;
   }
 
   img {
