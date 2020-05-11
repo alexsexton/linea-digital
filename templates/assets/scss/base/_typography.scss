@@ -146,15 +146,20 @@ address {
   }
 
   // Links
+
   a {
+    outline: none;
     color: $link-colour;
+    line-height: $base-line-height;
     text-decoration: none;
   }
 
   a:hover {
-    color: $link-hover-colour;
+    color: $link-colour;
+    text-decoration-skip-ink: auto;
+    text-decoration: underline;
   }
-
+  
   a:visited {
     color: $link-colour;
   }
