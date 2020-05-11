@@ -33,6 +33,7 @@
         color: $type-dark;
         font-weight: 200;
         &:hover {
+          text-decoration: none;
           color: $type-medium;
           border-bottom: 1px solid $type-medium;
         }
