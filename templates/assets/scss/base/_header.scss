@@ -23,7 +23,7 @@
     display: flex;
     padding-top: 5px;
     @media screen and (max-width: $small-screen) {
-      padding-top: 0;
+      padding-top: $spacer;
     }
 
     li {
