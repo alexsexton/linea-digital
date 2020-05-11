@@ -96,17 +96,7 @@
     @media screen and (max-width: $big-screen) {
       li {
         display: inline-flex;
-        margin-right: $spacer;
-
-        &:after {
-          content: '/';
-        }
-
-        &:last-of-type {
-          &:after {
-            content: '';
-          }
-        }
+        margin-right: $halfspacer;
       }
     }
 
