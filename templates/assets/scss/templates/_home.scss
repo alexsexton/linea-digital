@@ -92,6 +92,25 @@
       font-size: $base-font-size;
       margin: 0;
     }
+
+    @media screen and (max-width: $big-screen) {
+      li {
+        display: inline-flex;
+        margin-right: $spacer;
+
+        &:after {
+          content: '/';
+        }
+
+        &:last-of-type {
+          &:after {
+            content: '';
+          }
+        }
+      }
+    }
+
+
   }
 
   .project-image--m {
