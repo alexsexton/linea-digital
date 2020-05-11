@@ -26,14 +26,14 @@ p, span {
 a {
   outline: none;
   color: $link-colour;
-  font-weight: $bold;
   line-height: $base-line-height;
   text-decoration: none;
 }
 
 a:hover {
-  color: $link-hover-colour;
-  text-decoration: none;
+  color: $link-colour;
+  text-decoration-skip-ink: auto;
+  text-decoration: underline;
 }
 
 small {
