@@ -40,18 +40,17 @@
 
   .project {
     @include grid;
-    padding: $spacer4 0;
+    padding: $spacer6 0;
     border-bottom: 1px solid $type-medium;
 
     &:first-of-type {
-      padding: 0 0 $spacer4 0;
+      padding: 0 0 $spacer6 0;
     }
 
     @media screen and (max-width: $small-screen) {
       position: relative;
       display: block;
       padding: $spacer3 0 $spacer2;
-
     }
 
   }
