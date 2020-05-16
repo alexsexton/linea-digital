@@ -1,5 +1,5 @@
 @mixin section {
-  padding: 0 $site-gutters $spacer10;
+  padding: $spacer10 $site-gutters 0;
   @media screen and (max-width: $small-screen) {
     padding: 0 $small-site-gutters $spacer5;
   }
@@ -8,10 +8,11 @@
 
 .masthead {
   @include grid;
-  padding: 0 $site-gutters $spacer6;
+  padding: 0 $site-gutters $spacer10;
   @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer6;
+    padding: 0 $small-site-gutters $spacer5;
   }
+  height: 100vh;
   background: $masthead-background;
 
   .intro {
@@ -41,10 +42,7 @@
 }
 
 .projects {
-  padding: $spacer6 $site-gutters;
-  @media screen and (max-width: $small-screen) {
-    padding: $spacer3 $small-site-gutters;
-  }
+  @include section;
 
   .project {
     @include grid;
