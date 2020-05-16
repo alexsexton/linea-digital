@@ -13,7 +13,7 @@
 
 {% include 'includes/head.twig' %}
 
-<body class="{% if templateName is defined %}{{ templateName }}{% else %}default-layout{% endif %}">
+<body class="{% if templateName is defined %}{{ templateName }}{% else %}default-layout{% endif %}" id="top">
 
   {% if devMode %}
   <div class="dev-mode">Craft is running in Dev Mode.</div>
