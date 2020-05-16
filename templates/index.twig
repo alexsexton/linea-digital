@@ -36,6 +36,24 @@
 {% endfor %}
 </section>
 
+<section class="services" id="services">
+<h2>Services</h2>
+{% for entry in craft.entries.section('services').all %}
+
+<div class="services-grid">
+  {% for block in entry.services.type('service').all %}
+  <article class="service">
+    <h3>{{ block.serviceHeading }}</h3>
+    <div class="rich-text">
+      {{ block.serviceContent }}
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% endfor %}
+</section>
+
 
 <section class="clients" id="clients">
 <h2>Clients</h2>

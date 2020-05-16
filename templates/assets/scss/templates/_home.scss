@@ -1,3 +1,11 @@
+@mixin section {
+  padding: 0 $site-gutters $spacer10;
+  @media screen and (max-width: $small-screen) {
+    padding: 0 $small-site-gutters $spacer5;
+  }
+}
+
+
 .masthead {
   @include grid;
   padding: 0 $site-gutters $spacer6;
@@ -99,8 +107,6 @@
         margin-right: $halfspacer;
       }
     }
-
-
   }
 
   .project-image--m {
@@ -128,31 +134,46 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
   }
 
+}
 
+.services {
+  @include section;
+
+  .services-grid {
+    @include grid;
+  }
+
+  .service {
+    grid-column: span 3;
+    padding-bottom: $spacer2;
+    border-bottom: 1px solid $type-medium;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: $spacer2;
+      @media screen and (max-width: $small-screen) {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 .clients {
-  padding: 0 $site-gutters $spacer10;
-  @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer5;
-  }
+  @include section;
 
   ul {
     @include grid;
-    grid-gap: 0;
+    grid-row-gap: $spacer;
 
     li {
-      grid-column: span 2;
+      grid-column: span 3;
       font-size: 1.5rem;
     }
   }
 }
 
 .contact {
-  padding: 0 $site-gutters $spacer10;
-  @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer5;
-  }
+  @include section;
 
   p {
     font-size: 1.5rem;
