@@ -8,17 +8,10 @@
   {% endif %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  {% if entry.title is defined %}
-  <link rel="canonical" href="{{ entry.title }}">
-  {% elseif  entry.url is defined %}
   <link rel="canonical" href="{{ entry.url }}">
-  {% endif %}
 
   <link rel="dns-prefetch" href="//use.typekit.net">
-
   <link rel="stylesheet" href="/static/main.css?v={{ now|date("zB") }}" media="screen">
-
   <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css">
 
   <meta property="og:type" content="article">
@@ -31,7 +24,6 @@
   {% if siteDescription.metaDescription is defined %}
   <meta property="og:description" content="{{ siteDescription.metaDescription }}">
   {% endif %}
-
   <meta property="og:site_name" content="{{ siteName }}">
 
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
