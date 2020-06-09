@@ -1,7 +1,7 @@
 @mixin section {
   padding: $spacer10 $site-gutters 0;
   @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer5;
+    padding: $spacer5 $small-site-gutters 0;
   }
 }
 
@@ -145,6 +145,9 @@
     grid-column: span 3;
     padding-bottom: $spacer2;
     border-bottom: 1px solid $type-medium;
+    @media screen and (max-width: $small-screen) {
+      border-bottom: none;
+    }
 
     h3 {
       font-size: 2rem;

@@ -28,6 +28,9 @@
 
     li {
       margin-right: $spacer2;
+      @media screen and (max-width: $small-screen) {
+        margin-right: $spacer;
+      }
 
       a {
         color: $type-dark;
