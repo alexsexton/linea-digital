@@ -1,7 +1,7 @@
 @mixin section {
   padding: $spacer10 $site-gutters 0;
   @media screen and (max-width: $small-screen) {
-    padding: $spacer5 $small-site-gutters 0;
+    padding: $spacer7 $small-site-gutters 0;
   }
 }
 
