@@ -2995,9 +2995,7 @@
   }, e || (g.jQuery = g.$ = E), E;
 });
 /* globals */
-'use strict';
-
-const navItems = document.querySelectorAll('.main-nav a');
+'use strict'; // const navItems = document.querySelectorAll('.main-nav a')
 /*! modernizr 3.6.0 (Custom Build) | MIT *
  * https://modernizr.com/download/?-csstransforms3d-csstransitions-supports-svg-touchevents-mq-setclasses !*/
 !function (e, t, n) {
