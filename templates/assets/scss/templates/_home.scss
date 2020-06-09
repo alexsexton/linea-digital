@@ -57,6 +57,10 @@
       position: relative;
       display: block;
       padding: $spacer3 0 $spacer2;
+
+      &:first-of-type {
+        padding: 0 0 $spacer2 0;
+      }
     }
 
   }
