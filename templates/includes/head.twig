@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{{ siteName }} {% if  entry.title is defined %} / {{ entry.title }} {% elseif title is defined %} / {{ title }}{% endif %}</title>
+  <title>{{ siteName }} {% if  entry.title is defined %} | {{ entry.title }} {% elseif title is defined %} / {{ title }}{% endif %}</title>
   {%- if siteDescription.metaDescription is defined -%}
   <meta name="description" content="{{ siteDescription.metaDescription }}">
   {%- endif -%}
