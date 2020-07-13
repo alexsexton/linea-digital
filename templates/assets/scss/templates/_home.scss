@@ -9,11 +9,12 @@
 .masthead {
   @include grid;
   padding: 0 $site-gutters $spacer10;
-  @media screen and (max-width: $small-screen) {
-    padding: 0 $small-site-gutters $spacer5;
-  }
   height: 100vh;
   background: $masthead-background;
+  @media screen and (max-width: $small-screen) {
+    padding: 0 $small-site-gutters $spacer5;
+    height: auto;
+  }
 
   .intro {
     grid-column: 3 / span 7;
