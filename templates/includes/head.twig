@@ -2,6 +2,7 @@
   <meta charset="utf-8">
 
   <title>{{ siteName }} {% if  entry.title is defined %} | {{ entry.title }} {% elseif title is defined %} / {{ title }}{% endif %}</title>
+
   {% if siteDescription.metaDescription is defined %}
   <meta name="description" content="{{ siteDescription.metaDescription }}">
   {% endif -%}
@@ -13,14 +14,13 @@
   <link rel="stylesheet" href="/static/main.css" media="screen">
   <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css">
 
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   {% if entry.title is defined %}
   <meta property="og:title" content="{{ entry.title }}">
-  <meta property="og:url" content="{{ entry.url }}">
-  {% elseif entry.url is defined -%}
+  {% elseif entry.url is defined %}
   <meta property="og:url" content="{{ entry.url }}">
   {% endif %}
-  {% if siteDescription.metaDescription is defined -%}
+  {% if siteDescription.metaDescription is defined %}
   <meta property="og:description" content="{{ siteDescription.metaDescription }}">
   {% endif %}
   <meta property="og:site_name" content="{{ siteName }}">
