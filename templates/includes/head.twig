@@ -1,15 +1,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>{{ siteName }} {% if  entry.title is defined %} | {{ entry.title }} {% elseif title is defined %} / {{ title }}{% endif %}</title>
+  <title>{{ siteName }} {% if  entry.title is defined %} | {{ entry.title }} {% elseif title is defined %} | {{ title }}{% endif %}</title>
 
-  {% if siteDescription.metaDescription is defined %}
-  <meta name="description" content="{{ siteDescription.metaDescription }}">
-  {% endif %}
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="canonical" href="{{ entry.url }}">
-
+  {% if siteDescription.metaDescription is defined %}
+  <meta name="description" content="{{ siteDescription.metaDescription }}">
+  {% endif %}
   <link rel="dns-prefetch" href="//use.typekit.net">
   <link rel="stylesheet" href="/static/main.css" media="screen">
   <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css">
