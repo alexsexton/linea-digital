@@ -26,3 +26,4 @@ gulpfile.js
 /vendor
 /storage
 /web/cpresources
+/web/uploads
