@@ -48,7 +48,7 @@
   .project {
     @include grid;
     padding: $spacer6 0;
-    border-bottom: 1px solid $type-medium;
+    border-bottom: 1px solid $border-colour;
 
     &:first-of-type {
       padding: 0 0 $spacer6 0;
