@@ -17,7 +17,8 @@
 }
 
 .main-nav {
-  grid-column: 3 / span 5;
+  grid-column: 5 / span 5;
+  justify-self: flex-end;
 
   ul {
     display: flex;
@@ -27,7 +28,7 @@
     }
 
     li {
-      margin-right: $spacer2;
+      margin-left: $spacer2;
       @media screen and (max-width: $small-screen) {
         margin-right: $spacer;
       }
