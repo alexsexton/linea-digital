@@ -3,9 +3,9 @@
   background: $button;
   border-radius: 0;
   border: 0;
-  border: 1px solid rgba($button, 0.2);
+  border: 1px solid rgba($button-text, 0.4);
   box-sizing: border-box;
-  color: $button-text;
+  color: rgba($button-text, 0.6);
   cursor: pointer;
   display: inline-block;
   font-family: inherit;
@@ -17,10 +17,11 @@
   transition: all $trans-time ease-in-out;
   white-space: nowrap;
   text-decoration: none;
+  outline: none;
 
   &:hover {
-    color: $button-hover-text;
-    border: 1px solid rgba($button, 0.6);
+    color: rgba($button-text, 1);
+    border: 1px solid rgba($button-text, 1);
   }
 }
 

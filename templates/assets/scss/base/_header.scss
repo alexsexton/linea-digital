@@ -33,12 +33,13 @@
       }
 
       a {
-        color: $type-dark;
+        color: $linea-black;
         font-weight: 200;
+        transition: all $trans-time ease-in-out;
         &:hover {
           text-decoration: none;
-          color: $type-medium;
-          border-bottom: 1px solid $type-medium;
+          color: $type-light;
+          border-bottom: 2px solid $type-light;
         }
       }
     }

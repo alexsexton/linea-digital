@@ -10,6 +10,7 @@
   padding: 0 $site-gutters $spacer10;
   height: 100vh;
   background: $masthead-background;
+  align-content: center;
   @media screen and (max-width: $small-screen) {
     padding: 0 $small-site-gutters $spacer5;
     height: auto;
@@ -17,7 +18,7 @@
 
   .intro {
     grid-column: 3 / span 7;
-    padding-bottom: $spacer4;
+    color: $type-light;
     @media screen and (max-width: $big-screen) {
       grid-column: 2 / span 9;
     }
@@ -32,7 +33,7 @@
 
   h1 {
     font-family: $font-family-serif;
-    font-size: 5rem;
+    font-size: 5.5rem;
     color: $mastead-type;
     margin: $spacer3 0;
     @media screen and (max-width: $small-screen) {
@@ -83,7 +84,7 @@
 
     .project-url {
       a, a:hover {
-        color: $type-light;
+        color: $linea-medium-text;
       }
     }
   }
