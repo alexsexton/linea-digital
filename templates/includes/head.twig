@@ -11,7 +11,7 @@
   {% endif %}
   <link rel="dns-prefetch" href="//use.typekit.net">
   {% if devMode %}
-  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("s") }}" media="screen">
+  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("sf") }}" media="screen">
   {% else %}
   <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("Hd") }}" media="screen">
   {% endif %}
@@ -28,7 +28,7 @@
   {% endif %}
   <meta property="og:site_name" content="{{ siteName }}">
 
-  <link rel="apple-touch-icon" href="{{ siteUrl }}static/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="{{ siteUrl }}static/favicon.png">
+  <link rel="apple-touch-icon" href="{{ siteUrl }}static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="{{ siteUrl }}static/images/favicon.png">
 
 </head>
