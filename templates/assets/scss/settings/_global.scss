@@ -58,14 +58,15 @@ $white: #fff;
 $reddish: #9f5043;
 
 // Site
-$mastead-type: $reddish;
 $type-dark: #292220;
-$type-medium: #796b6e;
+$type-medium: #534d4b;
+$type-light: #88817e;
 $site-background: #f4f1ec;
 $masthead-background: #e8ddd9;
+$mastead-type: #292220;
 
 // Base Site
-$base-font-colour: $type-dark;
+$base-font-colour: $type-medium;
 $body-background: $site-background;
 
 // Brand
@@ -78,10 +79,10 @@ $link-colour: $brand-primary;
 $link-hover-colour: $brand-tertiary;
 
 // Buttons
-$button: $brand-primary;
-$button-text: $white;
-$button-hover: $white;
-$button-hover-text: $black;
+$button: transparent;
+$button-text: $type-light;
+$button-hover: transparent;
+$button-hover-text: $type-dark;
 $button-inactive: $light-grey;
 
 // Label
@@ -98,10 +99,10 @@ $input-border-colour-focus: $brand-primary;
 
 // Typography
 $font-family-sans: "mr-eaves-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-$font-family-serif: "kumlien-pro", Times,Serif;
-$base-font-size: 1.125rem;
-$base-line-height: 1.25;
-$heading-line-height: 1.25;
+$font-family-serif: "lust", Times,Serif;
+$base-font-size: 1.3rem;
+$base-line-height: 25px;
+$heading-line-height: 1.2;
 $small-font-size: 1rem;
 $measure: 44rem;
 $bold: 700;
@@ -111,7 +112,3 @@ $type-margin: 0.875rem;
 
 // Transitions
 $trans-time: 200ms;
-
-// Overlays
-$overlay-top: 122px;
-$m-overlay-top: 66px;

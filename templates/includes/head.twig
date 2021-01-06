@@ -10,7 +10,12 @@
   <meta name="description" content="{{ siteDescription.metaDescription }}">
   {% endif %}
   <link rel="dns-prefetch" href="//use.typekit.net">
+  {% if devMode %}
+  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("hs") }}" media="screen">
+  {% else %}
   <link rel="stylesheet" href="{{ siteUrl }}static/main.css" media="screen">
+  {% endif %}
+
   <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css">
 
   <meta property="og:type" content="website">

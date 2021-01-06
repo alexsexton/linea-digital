@@ -106,7 +106,7 @@ textarea {
 
 // Buttons
 .button {
-  @include ghost-button($type-medium, $type-medium, $site-background);
+  @include button;
 }
 
 // Labels

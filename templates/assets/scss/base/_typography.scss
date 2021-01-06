@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: $base-font-size;
   font-weight: $bold;
   line-height: $heading-line-height;
+  color: $type-dark;
 }
 
 p, span {
@@ -33,7 +34,6 @@ a {
 a:hover {
   color: $link-colour;
   text-decoration-skip-ink: auto;
-  text-decoration: underline;
 }
 
 small {
