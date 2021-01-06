@@ -28,6 +28,17 @@
       @media screen and (max-width: $small-screen) {
         margin: 0;
       }
+
+      a {
+        color: $type-light;
+        text-decoration: underline;
+        text-decoration-skip-ink: auto;
+
+        &:hover {
+          color: $type-light;
+          text-decoration: none;
+        }
+      }
     }
   }
 
