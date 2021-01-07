@@ -1,5 +1,6 @@
 .site-header {
   @include grid;
+  justify-content: center;
   background-color: $masthead-background;
   padding: $spacer2 $site-gutters;
   position: sticky;
@@ -12,7 +13,7 @@
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 140px;
   grid-column: 1 / span 4;
 }
 
@@ -37,7 +38,6 @@
       a {
         color: $linea-light-blue;
         font-weight: 200;
-        transition: all $trans-time ease-in-out;
         &:hover {
           text-decoration: none;
           color: $linea-white;
