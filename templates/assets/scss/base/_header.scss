@@ -35,12 +35,12 @@
       }
 
       a {
-        color: $linea-black;
+        color: $linea-light-blue;
         font-weight: 200;
         transition: all $trans-time ease-in-out;
         &:hover {
           text-decoration: none;
-          color: $type-light;
+          color: $linea-white;
           border-bottom: 2px solid $type-light;
         }
       }
