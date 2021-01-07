@@ -1,19 +1,17 @@
 //   Grid Mixins
 //
-//   Site: 1643px;
-//   Grid Measure (cell): 221px;
-//   Grid Gutter: 16px;
-//   No. of Cols: 7
+//   Site: 1440px;
+//   No. of Cols: 18
 //
 
 // Pixel widths
-$grid-measure-px: 221px;
-$grid-gutter-px: 16px;
+$grid-measure-px: 80px;
+$grid-gutter-px: 0px;
 
 // Turn to percentage
-$grid-wrapper: $site-max-width;
-$grid-gutter: percentage($grid-gutter-px / $site-max-width);
-$grid-measure: percentage($grid-measure-px / $site-max-width);
+$grid-wrapper: 1440px;
+$grid-gutter: percentage($grid-gutter-px / $grid-wrapper);
+$grid-measure: percentage($grid-measure-px / $grid-wrapper);
 
 $grid-gap: $grid-gutter;
 
@@ -22,10 +20,27 @@ $grid-gap: $grid-gutter;
   @return $n * $grid-measure + ($n - 1) * $grid-gutter;
 }
 
+// Magic! Use like this: flex: 0 0 grid-width(8);
+@function grid-width($n) {
+  @return $n * $grid-measure + ($n - 1) * $grid-gutter;
+}
+
 @mixin grid {
-  grid-gap: $spacer2;
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: auto;
+  @media screen and (max-width: $small-screen) {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+@mixin grid-services {
+  display: grid;
+  grid-template-columns: 6fr 1fr 6fr 1fr 6fr;
+  grid-template-areas: 'set-up . design . support';
+  grid-template-rows: auto;
+  grid-column-gap: 1fr;
   @media screen and (max-width: $small-screen) {
     display: flex;
     flex-flow: column nowrap;

@@ -6,8 +6,6 @@
 
 {% block content %}
 <section class="masthead" id="about">
-  <article class="intro">
-
   {% if entry.header %}
   <h1>{{ entry.header }}</h1>
   {% endif %}
@@ -23,8 +21,6 @@
     {{ entry.buttonText }}
   </a>
   {% endif %}
-
-  </article>
 </section>
 
 <section class="projects" id="projects">
@@ -43,7 +39,7 @@
 
 <div class="services-grid">
   {% for block in entry.services.type('service').all %}
-  <article class="service">
+  <article class="service {{ block.serviceHeading | lower | kebab }}">
     <h3>{{ block.serviceHeading }}</h3>
     <div class="rich-text">
       {{ block.serviceContent }}

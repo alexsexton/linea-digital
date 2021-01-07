@@ -27,7 +27,7 @@ $small-site-gutters: 32px;
 
 // Breakpoints
 $huge-screen: 1440px; // Large desktop screens
-$big-screen: 1024px;
+$big-screen: 1100px;
 $medium-screen-min: 961px;
 $medium-screen: 960px;
 $small-screen-min: 795px;
@@ -57,7 +57,7 @@ $linea-white: #eaf1f9;
 $black: $linea-black;
 $dark-grey: #393e4d;
 $medium-grey: #8c929e;
-$light-grey: #c2c8d2;
+$light-grey: #ced5e1;
 $white: $linea-white;
 
 $linea-dark-text: $linea-black;
@@ -93,7 +93,7 @@ $button-inactive: $light-grey;
 $table-borders: $linea-text;
 
 // Borders
-$border-colour: $linea-text;
+$border-colour: $light-grey;
 $border-radius: 0px;
 $border-size: 2px;
 $input-border-colour: $linea-text;
