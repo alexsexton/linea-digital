@@ -213,7 +213,10 @@
 
 .contact {
   @include section;
-  padding-bottom: $spacer5;
+  padding-bottom: $spacer6;
+  @media screen and (max-width: $small-screen) {
+    padding-bottom: $spacer3;
+  }
 
   p {
     font-size: 1.5rem;

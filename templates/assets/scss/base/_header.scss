@@ -15,6 +15,9 @@
 .logo {
   max-width: 140px;
   grid-column: 1 / span 4;
+  @media screen and (max-width: $small-screen) {
+  max-width: 120px;
+  }
 }
 
 .main-nav {
@@ -25,7 +28,7 @@
     display: flex;
     padding-top: 5px;
     @media screen and (max-width: $small-screen) {
-      padding-top: $spacer;
+      padding-top: 0;
     }
 
     li {

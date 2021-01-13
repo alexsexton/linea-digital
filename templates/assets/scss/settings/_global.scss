@@ -22,9 +22,9 @@ $spacer12: $spacer * 12;
 $spacer15: $spacer * 15;
 
 // Site Width
-$site-max-width: 1643px; // See settings/grid
-$site-gutters: 64px;
-$small-site-gutters: 32px;
+$site-max-width: 1440px; // See settings/grid
+$site-gutters: $spacer3;
+$small-site-gutters: $spacer2;
 
 // Breakpoints
 $huge-screen: 1440px; // Large desktop screens
@@ -103,7 +103,7 @@ $input-border-colour-focus: $linea-black;
 // Typography
 $font-family-sans: "mr-eaves-sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 $font-family-serif: "lust", Times,Serif;
-$base-font-size: 1.3rem;
+$base-font-size: 1.2rem;
 $base-line-height: 25px;
 $heading-line-height: 1.2;
 $small-font-size: 1rem;

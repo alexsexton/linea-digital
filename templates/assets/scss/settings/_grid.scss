@@ -46,3 +46,20 @@ $grid-gap: $grid-gutter;
     flex-flow: column nowrap;
   }
 }
+
+@mixin unset-grid-layout {
+  display: block;
+  grid-template-columns: unset;
+  grid-template-rows: unset;
+  grid-auto-rows: unset;
+  grid-gap: unset;
+  grid-template-areas: unset;
+}
+
+@mixin unset-grid {
+  display: block;
+  grid-column: unset;
+  grid-gap: unset;
+  grid-row: unset;
+  grid-area: unset;
+}
