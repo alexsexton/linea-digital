@@ -3,32 +3,33 @@
 
   <title>{% if  entry.title is defined %}{{ entry.title }} | {% elseif title is defined %}{{ title }} | {% endif %} {{ siteName }}</title>
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="canonical" href="{{ entry.url }}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="google-site-verification" content="6JtZ-Q72jwlAf74I2tBSFbtW6qlTeFCxz2OFUkSIFl4" />
+  <link rel="canonical" href="{{ entry.url }}" />
   {% if siteDescription.metaDescription is defined %}
-  <meta name="description" content="{{ siteDescription.metaDescription }}">
+  <meta name="description" content="{{ siteDescription.metaDescription }}" />
   {% endif %}
-  <link rel="dns-prefetch" href="//use.typekit.net">
+  <link rel="dns-prefetch" href="//use.typekit.net" />
   {% if devMode %}
-  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("sf") }}" media="screen">
+  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("sf") }}" media="screen" />
   {% else %}
-  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("HdI") }}" media="screen">
+  <link rel="stylesheet" href="{{ siteUrl }}static/main.css?v={{ "now"|date("HdI") }}" media="screen" />
   {% endif %}
 
-  <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css">
+  <link rel="stylesheet" href="https://use.typekit.net/gny0vgl.css" />
 
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="website" />
   {% if entry.title is defined %}
-  <meta property="og:title" content="{{ entry.title }}">
-  <meta property="og:url" content="{{ entry.url }}">
+  <meta property="og:title" content="{{ entry.title }}" />
+  <meta property="og:url" content="{{ entry.url }}" />
   {% endif %}
   {% if siteDescription.metaDescription is defined %}
-  <meta property="og:description" content="{{ siteDescription.metaDescription }}">
+  <meta property="og:description" content="{{ siteDescription.metaDescription }}" />
   {% endif %}
-  <meta property="og:site_name" content="{{ siteName }}">
+  <meta property="og:site_name" content="{{ siteName }}" />
 
-  <link rel="apple-touch-icon" href="{{ siteUrl }}static/images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="{{ siteUrl }}static/images/favicon.png">
+  <link rel="apple-touch-icon" href="{{ siteUrl }}static/images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="{{ siteUrl }}static/images/favicon.png" />
 
 </head>
